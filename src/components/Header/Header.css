@@ -1,0 +1,115 @@
+.header {
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--black-color);
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem 3rem;
+  z-index: 100;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav_logo {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: var(--bold-wg);
+  letter-spacing: 1px;
+}
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav_link:hover,
+.active_link {
+  color: var(--blue-color);
+}
+.nav_close,
+.nav_toggle,
+.nav_link-icon {
+  display: none;
+}
+
+/* //////////////////// BREAKPOINT //////////////////// */
+/* 600px */
+@media only screen and (max-width: 37.5em) {
+  .header {
+    top: initial;
+    bottom: 0;
+    height: 5rem;
+    padding: 1rem 2.5rem;
+  }
+  .nav_logo,
+  .nav_toggle {
+    font-size: 2rem;
+  }
+  .nav_menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--black-color);
+    padding: var(--pad-4) var(--pad-4);
+    box-shadow: 0 -0.1rem 0.8rem rgba(0, 0, 0, 0.6);
+    border-radius: 20px 20px 0 0;
+    transition: var(--transition);
+    z-index: 9999;
+  }
+  .show_modal {
+    bottom: 0;
+    width: 100%;
+  }
+  .nav_links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+  .nav_link-icon,
+  .nav_close,
+  .nav_toggle {
+    display: block;
+  }
+  .nav_close {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 2.5rem;
+  }
+  .nav_close:hover {
+    color: var(--blue-color);
+  }
+}
+/* 425px */
+@media only screen and (max-width: 26.5625em) {
+  .nav_link,
+  .nav_close {
+    font-size: 1.4rem;
+  }
+}
+/* 384px */
+@media only screen and (max-width: 24em) {
+  .header {
+    height: 4.5rem;
+  }
+  .nav_logo,
+  .nav_toggle {
+    font-size: 1.6rem;
+  }
+}

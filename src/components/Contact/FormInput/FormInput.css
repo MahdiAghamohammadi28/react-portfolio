@@ -1,0 +1,121 @@
+.form {
+  margin-left: 5rem;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.name_label,
+.email_label {
+  position: absolute;
+  top: -16px;
+  left: 14px;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--white-color);
+  z-index: 10;
+}
+.name_label::before,
+.email_label::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  height: 2px;
+  background-color: var(--black-color);
+  z-index: -1;
+}
+.name_label::before {
+  width: 55px;
+}
+.email_label::before {
+  width: 50px;
+}
+.input {
+  margin-bottom: 1rem;
+}
+.input input {
+  width: 35rem;
+  height: 5rem;
+  font-family: inherit;
+  font-weight: 500;
+  color: rgba(38, 38, 38, 0.6);
+  background-color: transparent;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 2rem;
+}
+
+.input input:focus {
+  background-color: var(--black-color);
+  color: rgba(38, 38, 38, 0.6);
+}
+.input input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: capitalize;
+}
+.text_area-input {
+  position: relative;
+}
+.text_area-label {
+  position: absolute;
+  top: -15px;
+  left: 14px;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--white-color);
+
+  z-index: 10;
+}
+.text_area {
+  position: relative;
+  width: 35rem;
+  height: 15rem;
+  resize: none;
+  font-family: inherit;
+  font-weight: 500;
+  background-color: transparent;
+  color: var(--white-color);
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 2rem;
+}
+
+.text_area-label::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 75px;
+  height: 2px;
+  background-color: var(--black-color);
+  z-index: -1;
+}
+
+/* /////////////////// BREAKPOINTS /////////////////// */
+/* 600px */
+@media only screen and (max-width: 37.5em) {
+  .form {
+    margin-left: 0;
+  }
+}
+/* 425px */
+@media only screen and (max-width: 26.5625em) {
+  .input input {
+    width: 30rem;
+  }
+  .text_area {
+    width: 30rem;
+  }
+}

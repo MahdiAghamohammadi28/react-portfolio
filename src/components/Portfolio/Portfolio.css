@@ -1,0 +1,73 @@
+.portfolio {
+  width: 100%;
+  padding: var(--pad-8) var(--pad-3) var(--pad-3) var(--pad-3);
+}
+.portfolio_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.portfolio_title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section_title {
+  font-size: 3rem;
+  font-weight: var(--bold-wg);
+  text-transform: uppercase;
+}
+.section_subtitle {
+  display: block;
+  font-family: var(--josefin);
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  font-weight: var(--normal-wg);
+  color: var(--blue-color);
+}
+
+/* //////////////////// BREAKPOINT //////////////////// */
+/* 1200px */
+@media only screen and (max-width: 75em) {
+  .portfolio {
+    width: 100%;
+    padding: var(--pad-8) var(--pad-3) var(--pad-3) var(--pad-3);
+  }
+}
+/* 768px */
+@media only screen and (max-width: 48em) {
+  .portfolio {
+    margin-left: 1rem;
+  }
+  .portfolio_title-container {
+    width: 100%;
+    margin-left: 3rem;
+  }
+}
+/* 384px */
+@media only screen and (max-width: 24em) {
+  .portfolio_title-container {
+    margin-left: 0rem;
+  }
+}
+/* 600px */
+@media only screen and (max-width: 37.5em) {
+  .portfolio {
+    width: 100%;
+    margin-left: 2.5rem;
+  }
+  .portfolio_title-container {
+    width: 100%;
+    margin-left: 1rem;
+  }
+}
+/* 320px */
+@media only screen and (max-width: 20em) {
+  .portfolio {
+    width: 100%;
+    margin-left: 3.5rem;
+  }
+}

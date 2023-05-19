@@ -1,0 +1,61 @@
+.list {
+  width: 80rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+}
+.list_btn {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-out;
+  color: var(--white-color);
+}
+.list_btn:not(:last-child) {
+  margin-right: 1rem;
+}
+.list_btn:hover,
+.list_btn-active {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border-radius: 10px;
+}
+
+/* /////////////////// BREAKPOINTS /////////////////// */
+
+/* 768px */
+@media only screen and (max-width: 48em) {
+  .list {
+    width: 51rem;
+  }
+  .list_btn {
+    font-size: 1.4rem;
+  }
+}
+/* 600px */
+@media only screen and (max-width: 37.5em) {
+  .list_btn {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+  }
+}
+/* 375px */
+@media only screen and (max-width: 23.4375em) {
+  .list_btn:not(:last-child) {
+    margin-right: 0.2rem;
+  }
+}
+/* 320px */
+@media only screen and (max-width: 20em) {
+  .list {
+    width: 26rem;
+  }
+}

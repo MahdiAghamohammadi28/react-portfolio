@@ -1,0 +1,41 @@
+.langs {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(25rem, 1fr));
+  justify-content: center;
+  gap: 2rem;
+}
+.lang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  border-radius: 20px;
+}
+.lang_title {
+  display: flex;
+}
+.lang_title span {
+  font-weight: 500;
+  margin-left: 0.3rem;
+}
+
+/* /////////////////// BREAKPOINTS /////////////////// */
+/* 768px */
+@media only screen and (max-width: 48em) {
+  .langs {
+    width: 90%;
+    grid-template-columns: repeat(2, minmax(25rem, 1fr));
+  }
+}
+/* 425px */
+@media only screen and (max-width: 26.5625em) {
+  .langs {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+  .lang {
+    padding: 2rem;
+  }
+}
